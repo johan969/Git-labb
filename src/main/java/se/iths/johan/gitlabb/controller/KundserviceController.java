@@ -15,18 +15,22 @@ public class KundserviceController {
 
     @GetMapping
     public String kundserviceInfo(Model model) {
+        List<String> phoneNumbers1 = List.of("0701234567", "0700876543");
+        List<String> phoneNumbers2 = List.of("0701234567", "0701876543");
+        List<String> phoneNumbers3 = List.of("0701234567", "0702876543");
+
         List<Kundservice> kundserviceDetails = List.of(
                 new Kundservice(
                         "mr.cool@example.com",
-                        "0701234567",
+                        phoneNumbers1,
                         "07:00"),
                 new Kundservice(
                         "hej@example.com",
-                        "0702234567",
+                        phoneNumbers2,
                         "04:00"),
                 new Kundservice(
                         "ikea@example.com",
-                        "0703234567",
+                        phoneNumbers3,
                         "09:00"));
         model.addAttribute("kundserviceDetails", kundserviceDetails);
         return "kundservice";
