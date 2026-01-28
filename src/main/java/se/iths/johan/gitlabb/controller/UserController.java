@@ -19,9 +19,9 @@ public class UserController {
 
         List<User> users = new ArrayList<User>();
 
-        users.add(new User("Joel", "joelPassword", "joel@email.com"));
-        users.add(new User("Jimmy", "jimmyPassword", "jimmy@email.com"));
-        users.add(new User("Johan", "johanPassword", "johan@email.com"));
+        users.add(new User("Joel", 24, "joel@email.com"));
+        users.add(new User("Jimmy", 43, "jimmy@email.com"));
+        users.add(new User("Johan", 17, "johan@email.com"));
 
         model.addAttribute("users", users);
         return "user";

@@ -3,15 +3,15 @@ package se.iths.johan.gitlabb.model;
 public class User {
 
     String username;
-    String password;
+    int age;
     String email;
 
     public User() {
     }
 
-    public User(String username, String password, String email) {
+    public User(String username, int age, String email) {
         this.username = username;
-        this.password = password;
+        this.age = age;
         this.email = email;
     }
 
@@ -23,12 +23,12 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public int getAge() {
+        return age;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getEmail() {
