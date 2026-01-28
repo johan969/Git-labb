@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personer</title>
+</head>
+<body>
+<h1>Lista över personer</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Namn</th>
+        <th>Ålder</th>
+        <th>Adress</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="p : ${personList}">
+        <td th:text="${p.name}">Namn</td>
+        <td th:text="${p.age}">Ålder</td>
+        <td th:text="${p.address}">Adress</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
