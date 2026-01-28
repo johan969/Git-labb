@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kundservice Information</title>
+</head>
+<body>
+
+    <h1>Vår Kundservice</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>E-post</th>
+                <th>Telefonnummer</th>
+                <th>Öppningstid</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="info : ${kundserviceDetails}">
+                <td th:text="${info.mail}">E-post</td>
+                <td th:text="${info.phoneNumber}">Telefonnummer</td>
+                <td th:text="${info.openingTime}">Öppningstid</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <a href="/">Tillbaka till startsidan</a>
+
+</body>
+</html>
