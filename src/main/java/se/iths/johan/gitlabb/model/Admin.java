@@ -1,9 +1,9 @@
 package se.iths.johan.gitlabb.model;
 
 public class Admin {
-    String username;
-    String password;
-    boolean isAdmin;
+    private String username;
+    private String password;
+    private boolean isAdmin;
 
     public Admin(String username, String password, boolean isAdmin) {
         this.username = username;
