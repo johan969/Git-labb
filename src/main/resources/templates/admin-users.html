@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Users</title>
+</head>
+<body>
+<h1>Admin Users</h1>
+
+<ul>
+    <li th:each="u : ${adminUsers}">
+        <strong th:text="${u.username}"></strong>
+        —
+        <span>password: </span><span th:text="${u.password}"></span>
+        —
+        <span>isAdmin: </span><span th:text="${u.admin}"></span>
+    </li>
+</ul>
+
+</body>
+</html>
