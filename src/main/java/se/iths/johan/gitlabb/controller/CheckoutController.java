@@ -13,9 +13,9 @@ public class CheckoutController {
     @GetMapping("/checkouts")
     public String checkouts(Model model) {
         List<Checkout> checkouts = List.of(
-                new Checkout("Card", List.of("Keyboard", "Mouse", "Monitor"), "SEK"),
-                new Checkout("Swish", List.of("Coffee", "Cookies", "Tea"), "SEK"),
-                new Checkout("PayPal", List.of("Book", "Pen", "Notebook"), "USD")
+                new Checkout("Card", List.of("Keyboard", "Mouse", "Monitor"), '€'),
+                new Checkout("Swish", List.of("Coffee", "Cookies", "Tea"), '€'),
+                new Checkout("PayPal", List.of("Book", "Pen", "Notebook"), '$')
         );
         model.addAttribute("checkouts", checkouts);
         return "checkouts";
