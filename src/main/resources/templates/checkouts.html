@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkouts</title>
+</head>
+<body>
+<h1>Checkouts</h1>
+
+<div th:each="co : ${checkouts}" style="margin-bottom: 16px;">
+    <h3>
+        Payment method: <span th:text="${co.paymentMethod}"></span>
+        —
+        Currency: <span th:text="${co.currency}"></span>
+    </h3>
+
+    <ul>
+        <li th:each="p : ${co.products}" th:text="${p}"></li>
+    </ul>
+</div>
+
+</body>
+</html>
